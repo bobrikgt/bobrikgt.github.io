@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>BOBRIKGT</title>
+    <title>FREDDYGT</title>
     <style>
-        .kartinkabobrika{
+        .kartinkafreddy{
             scale: 50%;
         }
         body {
@@ -19,8 +19,8 @@
 </head>
 <body>
 <div>
-    <h1>dreamcore bobrik <a href="freddygt.html">go to freddygt</a></h1>
-    <img src="bobrik.jpeg" class="kartinkabobrika">
+    <h1>dreamcore freddy <a href="index.html">go back to bobrikgt</a></h1>
+    <img src="freddy.jpeg" class="kartinkafreddy">
 </div>
 <script>
     const song = document.createElement('audio');
@@ -28,14 +28,16 @@
     song.loop = true;
     document.addEventListener('click', function() {
         song.play()
-            .then(() => {
-            })
-            .catch(error => { console.error(error); });
-    }, { once: true });
+            .then(() => {})
+            .catch(error => { console.error(error);
+            });
+        },
+        { once: true }
+    );
     $(document).ready(function(){
         $(document).click(song.play())
-        $(".kartinkabobrika").click(function(){
-            $(".kartinkabobrika").attr("src", "strashniybobrik.jpg");
+        $(".kartinkafreddy").click(function(){
+            $(".kartinkafreddy").attr("src", "strashniyfreddy.png");
             song.pause()
             setTimeout(function(){ window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; }, 1000);
         })
