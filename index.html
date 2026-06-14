@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>BOBRIKGT3</title>
     <style>
         .kartinkabobrika{
@@ -21,5 +22,24 @@
     <h1>dreamcore bobrik</h1>
     <img src="bobrik.jpeg" class="kartinkabobrika">
 </div>
+<script>
+    const song = document.createElement('audio');
+    song.src = "song.mp3";
+    song.loop = true;
+    document.addEventListener('click', function() {
+        song.play()
+            .then(() => {
+            })
+            .catch(error => { console.error(error); });
+    }, { once: true });
+    $(document).ready(function(){
+        $(document).click(song.play())
+        $(".kartinkabobrika").click(function(){
+            $(".kartinkabobrika").attr("src", "strashniybobrik.jpg");
+            song.pause()
+            setTimeout(function(){ window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; }, 1000);
+        })
+    })
+</script>
 </body>
 </html>
